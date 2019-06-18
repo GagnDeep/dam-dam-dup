@@ -1,28 +1,30 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Layout from './components/ui/layout/layout';
+import GamePlay from './containers/gamePlay/gamePlay';
 
 class App extends Component {
+  state = {
+    infoBar: <span>Created By Gagandeep Singh</span>
+  }
+  
+  componentWillMount(){
+    this.originalState = {...this.state};
+  }
+  
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+        <Layout infoBar = {this.state.infoBar}>
+            <GamePlay infoChange = {this.infoChangeHandler} reset = {this.reset}/>
+        </Layout>
     );
   }
+  
+  infoChangeHandler = info => {
+    let str = Object.keys(info).sort().map((el,i)=>(<div key = {i}><span>{el}</span>: {info[el]}</div>));
+    this.setState({infoBar: str});
+  }
+  
+  reset = ()=>this.setState(this.originalState);
 }
 
 export default App;

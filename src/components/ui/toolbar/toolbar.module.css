@@ -1,0 +1,28 @@
+.Toolbar{
+    height: 5vh;
+    width: 100vw;
+    background: rgba(0,0,0,0.7);
+    /*position: absolute;*/
+    bottom: 0;
+    text-align:center;
+}
+.Toolbar button{
+    height: 100%;
+    color: white;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius:5px;
+}
+.Toolbar button:active{
+    background:white;
+    color:black;
+}
+.Toolbar p{
+    /*display:inline-block;*/
+    margin:0;
+    color:white;
+    line-height:5vh;
+    font-size:13px;
+}

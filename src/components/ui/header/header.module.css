@@ -1,0 +1,17 @@
+.Header{
+    width:100vw;
+    height:20vh;
+    background-color: #f0932b;
+    position:relative;
+}
+
+.Header p{
+    
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin:0;
+    color: rgba(0,0,0,0.6);
+    text-align:center;
+    line-height:3;
+    text-transform: uppercase;
+}

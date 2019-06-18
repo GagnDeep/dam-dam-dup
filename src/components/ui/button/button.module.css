@@ -1,0 +1,100 @@
+.Button{
+    height: 15vh;
+    overflow:auto;
+    width: 40vw;
+    display: flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    background: #f0932b;
+    border: 5px solid black;
+    box-sizing: border-box;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius:10px;
+    margin: 10px;
+    position:relative;
+}
+.Button p{
+    margin:0;
+    padding:0;
+}
+/*.Button:active{*/
+/*    background: white;*/
+/*    color: black;*/
+/*}*/
+.Button button{
+    width:50%;
+    height:50%;
+    background: #f0932b;
+    outline: none;
+    border:1px solid black;
+    font-weight: bold;
+}
+
+.coveringDiv{
+    margin: 0;
+    padding:0;
+    font-size:13px;
+    text-align:center;
+    height:100%;
+    width:100%;
+}
+.playerId{
+    margin:0;
+    font-weight:bold;
+}
+.coveringDiv button{
+    height:45%;
+    width:40%;
+    margin: 3px;
+    border-radius: 5px;
+    color: black;
+}
+.coveringDiv button:disabled{
+    background:rgba(0,0,0,0.5);
+    color:black;
+}
+
+.state{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+.state p{
+    margin: 0;
+    padding: 2em;
+    color:#f0932b;
+}
+
+.Done{
+    position:absolute;
+    bottom:0;
+    text-align:center;
+    width:100%;
+    color:black;
+    background:#27ae60;
+    font-weight:bold;
+    font-size:12px;
+    border:1px solid black;
+    
+}
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}

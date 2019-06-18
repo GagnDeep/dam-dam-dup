@@ -1,14 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Open Sans', sans-serif;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.example-leave {
+  transform:translate(0,100px);
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  transform:translate(0,0);
+  opacity: 0.01;
+  transition: all 300ms ease-in;
+}
+.example-appear {
+  transform:translate(0,100px);
+  opacity: 0.01;
+}
+
+.example-appear.example-appear-active {
+  transform:translate(0,0);
+  opacity: 1;
+  transition: all .2s ease-in-out;
 }
